@@ -1,7 +1,7 @@
 <template lang="en">
   <div id="home" class="home">
     <h1>{{ msg }}</h1>
-    <button type="button" name="button">LogIn with Google Account</button>
+    <button @click="googleLogin">LogIn with Google Account</button>
   </div>
 </template>
 
@@ -12,8 +12,15 @@ export default {
     return {
       msg: "Welcome to MyMarkdown"
     };
+  },
+  methods: {
+    googleLogin: function() {
+      firebase
+        .auth()
+        .signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+    }
   }
-}
+};
 </script>
 
 <style lang="css">

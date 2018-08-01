@@ -26,6 +26,16 @@ export default {
     return {
       msg: 'Welcome to MyMarkdown'
     }
+  },
+  created: function(){
+    firebase.auth().onAuthStateChanged(user => {
+      console.log(user);
+      if (user) {
+        this.isLogin = true;
+      } else {
+        this.isLogin = false;
+      };
+    });
   }
 }
 </script>

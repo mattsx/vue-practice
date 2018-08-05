@@ -1,4 +1,4 @@
-<template lang="en">
+<template>
   <div class="editor">
     <h1>Editor</h1>
     <span>{{user.displayName}}</span>
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     logout: function() {
-firebase.auth().signOut();
+      firebase.auth().signOut();
     }
   }
 };

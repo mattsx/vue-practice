@@ -1,4 +1,4 @@
-<template lang="en">
+<template>
   <div id="home" class="home">
     <h1>{{ msg }}</h1>
     <button @click="googleLogin">LogIn with Google Account</button>

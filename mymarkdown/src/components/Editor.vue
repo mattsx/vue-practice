@@ -3,45 +3,89 @@
     <h1>Editor</h1>
     <span>{{user.displayName}}</span>
     <button @click="logout">LogOut</button>
-    <div class="editorWrapper">
-      <textarea class="markdown" v-model="markdown" name="name" rows="8" cols="80"></textarea>
-      <div class="preview" v-html="preview()"></div>
+    <div class="memoListWrapper">
+      <div class="memoList" v-for="(memo, index) in memos" @click="selectMemo(index)" : data-selected="index == selectedIndex">
+        <p class="memoTitle">{{ displayTitle(memo.markdown) }}</p>
+      </div>
+      <button class="addMemoBtn" @click="addMemo">Add Memo</button>
+    </div>
+    <textarea class="markdown" v-model="memos[selectedIndex].markdown"></textarea>
+    <div class="preview" v-html="preview()">
     </div>
   </div>
 </template>
 
 <script>
-import marked from "marked"
+import marked from "marked";
 
 export default {
   name: "editor",
   props: ["user"],
   data() {
-    return{
-      markdown: ""
+    return {
+      memos: [
+        {markdown: ""}
+      ],
+      selectedIndex: 0
     };
   },
   methods: {
     logout: function() {
       firebase.auth().signOut();
     },
+    addMemo: function() {
+      this.memos.push({
+        markdown: "Memo"
+      });
+    },
+    selectMemo: function(index) {
+      this.selectedIndex = index;
+    },
     preview: function() {
-      return marked(this.markdown);
+      return marked(this.memos[this.selectedIndex].markdown);
+    },
+    displayTitle: function(text) {
+      return text.split(/\n/)[0];
     }
   }
 };
 </script>
 
 <style lang="sass" scoped>
-.editorWrapper
-  display: flex
+$border: 1px solid #000 !default
+
+.memoListWrapper
+  width: 19%
+  float: left
+  border-top: $border
+
+.memoList
+  padding: 10px
+  box-sizing: border-box
+  text-align: left
+  border-bottom: $border
+  &:nth-child(even)
+    background-color: #ccc
+  &[data-selected="true"]
+    background-color: #ccf
+
+.memoTitle
+  min-height: 1.5em
+  margin: 0
+  white-space: nowrap
+  overflow: hidden
+
+.addMemoBtn
+  margin-top: 20px
 
 .markdown
-  width: 50%
+  float: left
+  width: 40%
   height: 500px
 
 .preview
-  width: 50%
+  float: left
+  width: 40%
   text-align: left
 
 </style>

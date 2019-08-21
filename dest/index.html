@@ -11,11 +11,8 @@
     <div class="container">
       
       <div id="app">
-        <p>
-          <input type="text" name="" v-bind:value="message">
-        </p>
-        <p>
-          {{ message }}
+        <p v-if="toggle">
+          Hello.
         </p>
         
       </div>

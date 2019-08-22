@@ -6,7 +6,8 @@ var app = new Vue({
   // options
   el: '#app',
   data: {
-    bpi: null
+    bpi: null,
+    hasError: false
   },
   
   mounted: function() {
@@ -16,8 +17,9 @@ var app = new Vue({
       }.bind(this))
       .catch(function(error){
         console.error(error)
+        this.hasError = true
         return
-      })
+      }.bind(this))
   },
   
   filters: {

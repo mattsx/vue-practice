@@ -7,14 +7,16 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'hello vue.js!',
-    number: 100,
-    ok: true
+    price: 29800,
   },
   
   mounted: function() {
   },
   
   filters: {
+    numberFormat: function(value){
+      return value.toLocaleString();
+    }
   },
   
   methods: {

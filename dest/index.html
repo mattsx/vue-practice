@@ -19,7 +19,7 @@
         <ul>
           <li v-for="todo in todos">
             <input type="checkbox" v-model="todo.isDone">
-            <span>
+            <span v-bind:class="{ done: todo.isDone }">
               {{ todo.item }}
             </span>
           </li>

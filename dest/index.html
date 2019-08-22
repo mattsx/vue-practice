@@ -11,13 +11,12 @@
     <div class="container">
       
       <div id="app">
-        <ul>
-          <li v-for="value in user">{{ value }}</li>
-        </ul>
-        <hr>
-        <ul>
-          <li v-for="(v, k) in user">{{ k }} : {{ v }}</li>
-        </ul>
+        <button v-on:click="onclick">
+          Click!
+        </button>
+        <p>
+          {{ now }}
+        </p>
       </div>
       
     </div>

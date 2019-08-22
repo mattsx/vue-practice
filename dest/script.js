@@ -5,5 +5,9 @@
 var app = new Vue({
   // options
   el: '#app',
-  
+  methods: {
+    addItem: function(event){
+      console.(event)
+    }
+  }
 })

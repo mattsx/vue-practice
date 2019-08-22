@@ -9,6 +9,12 @@ var app = new Vue({
     message: 'hello, vue.js',
   },
   
+  computed: {
+    reversedMessage: function(event) {
+      return this.message.split('').reverse().join('')
+    }
+  },
+  
   mounted: function() {
   },
   
@@ -19,5 +25,8 @@ var app = new Vue({
   // },
   
   methods: {
+    reversedMessageMethod: function() {
+      return this.message.split('').reverse().join('')
+    }
   }
 })

@@ -9,6 +9,7 @@ var app = new Vue({
     newItem: '',
     todos: []
   },
+  
   methods: {
     addItem: function(event){
       if (this.newItem == '') return;
@@ -19,6 +20,10 @@ var app = new Vue({
       };
       this.todos.push(todo);
       this.newItem = '';
+    },
+    
+    deleteItem: function(index){
+      this.todos.splice(index, 1)
     }
   }
 })

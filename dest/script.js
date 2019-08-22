@@ -16,7 +16,14 @@ var app = new Vue({
       }.bind(this))
       .catch(function(error){
         console.error(error)
+        return
       })
+  },
+  
+  filters: {
+    currencyDecimal(value) {
+      return value.toFixed(2)
+    }
   },
   
   methods: {

@@ -7,17 +7,12 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'hello, vue.js',
-    basePrice: 100
   },
   
   computed: {
-    taxIncludedPrice: {
-      get: function() {
-        return parseInt(this.basePrice * 1.08)
-      },
-      set: function(taxIncludedPrice) {
-        this.basePrice = Math.ceil(taxIncludedPrice / 1.08)
-      }
+    computedNumber: function() {
+      console.log('computed!')
+      return Math.random()
     }
   },
   
@@ -31,6 +26,9 @@ var app = new Vue({
   // },
   
   methods: {
-    
+    methodsNumber: function() {
+      console.log('methods!')
+      return Math.random()
+    }
   }
 })

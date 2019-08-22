@@ -10,14 +10,19 @@
       
       <div id="app">
         <h2>sec6</h2>
-        <p>
-          base price: <input type="number" name="" value="" v-model="basePrice">
-        </p>
-        
-        <p>
-          tax included price: <input type="number" name="" value="" v-model="taxIncludedPrice">
-        </p>
-        
+        <h3>Computed</h3>
+        <ol>
+          <li>{{ computedNumber }}</li>
+          <li>{{ computedNumber }}</li>
+          <li>{{ computedNumber }}</li>
+        </ol>
+        <hr>
+        <h3>Methods</h3>
+        <ol>
+          <li>{{ methodsNumber() }}</li>
+          <li>{{ methodsNumber() }}</li>
+          <li>{{ methodsNumber() }}</li>
+        </ol>
       </div>
       
     </div>

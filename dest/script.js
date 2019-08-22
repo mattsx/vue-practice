@@ -7,7 +7,6 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'hello, vue.js',
-    url: 'https://www.google.com'
   },
   
   mounted: function() {

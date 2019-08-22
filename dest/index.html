@@ -9,8 +9,10 @@
     <div class="container">
       
       <div id="app">
-        <h2>v-pre</h2>
-        <p v-pre>{{ message }}</p>
+        <div v-cloak>
+          <h2>v-cloak</h2>
+          <p>{{ message }}</p>
+        </div>
       </div>
       
     </div>

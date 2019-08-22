@@ -1,25 +1,29 @@
-Vue.component('yossha', {
-  template: '<p>template</p>'
-})
+// Vue.component('template', {
+//   template: '<p>template</p>'
+// })
 
 var app = new Vue({
   // options
   el: '#app',
   data: {
-    message: 'Hello, World!',
-    linkMessage: 'Vue.js link here.',
-    url: 'https://jp.vuejs.org/',
-    toggle: true,
-    
-    languages: [
-      'JavaScript',
-      'Ruby',
-      'Python'
-    ]
+    newItem: '',
+    todos: []
   },
+  
   methods: {
-    clickHandler: function() {
-      this.message = 'clicked!'
+    addItem: function(event){
+      if (this.newItem == '') return;
+      
+      var todo = {
+        item: this.newItem,
+        isDone: false
+      };
+      this.todos.push(todo);
+      this.newItem = '';
+    },
+    
+    deleteItem: function(index){
+      this.todos.splice(index, 1)
     }
   }
 })

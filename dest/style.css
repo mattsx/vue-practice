@@ -3,11 +3,6 @@
   max-width: 980px;
 }
 
-#app ul {
-  list-style: none;
-}
-
-
-#app li > span.done {
-  text-decoration: line-through;
+[v-cloak] {
+  display: none;
 }

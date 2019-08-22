@@ -1,4 +1,14 @@
+Vue.component('yossha', {
+  template: '<p>template</p>'
+})
+
 var app = new Vue({
   // options
-  el: '#app'
+  el: '#app',
+  data: {
+    message: 'Hello, World!',
+    linkMessage: 'Vue.js link here.',
+    url: 'https://jp.vuejs.org/',
+    toggle: true
+  }
 })

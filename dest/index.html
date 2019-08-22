@@ -9,20 +9,12 @@
     <div class="container">
       
       <div id="app">
-        <h2>sec6</h2>
-        <h3>Computed</h3>
-        <ol>
-          <li>{{ computedNumber }}</li>
-          <li>{{ computedNumber }}</li>
-          <li>{{ computedNumber }}</li>
-        </ol>
+        <h2>sec7 監視プロパティ</h2>
+        <p>{{ message }}</p>
+        <input type="text" name="" value="" v-model="message">
+        
         <hr>
-        <h3>Methods</h3>
-        <ol>
-          <li>{{ methodsNumber() }}</li>
-          <li>{{ methodsNumber() }}</li>
-          <li>{{ methodsNumber() }}</li>
-        </ol>
+        <pre>{{ $data }}</pre>
       </div>
       
     </div>

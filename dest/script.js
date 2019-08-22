@@ -9,11 +9,13 @@ var app = new Vue({
     message: 'hello, vue.js',
   },
   
-  computed: {
-    computedNumber: function() {
-      console.log('computed!')
-      return Math.random()
+  watch: {
+    message: function(newValue, oldValue) {
+      console.log('new: %s, old: %s', newValue, oldValue)
     }
+  },
+  
+  computed: {
   },
   
   mounted: function() {
@@ -26,9 +28,5 @@ var app = new Vue({
   // },
   
   methods: {
-    methodsNumber: function() {
-      console.log('methods!')
-      return Math.random()
-    }
   }
 })

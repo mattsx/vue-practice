@@ -7,7 +7,13 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'hello, vue.js',
-    url: 'https://www.google.com'
+  },
+  
+  computed: {
+    computedNumber: function() {
+      console.log('computed!')
+      return Math.random()
+    }
   },
   
   mounted: function() {
@@ -20,5 +26,9 @@ var app = new Vue({
   // },
   
   methods: {
+    methodsNumber: function() {
+      console.log('methods!')
+      return Math.random()
+    }
   }
 })

@@ -6,6 +6,7 @@ var app = new Vue({
   // options
   el: '#app',
   data: {
+    message: 'hello vue.js!'
   },
   
   mounted: function() {
@@ -15,5 +16,8 @@ var app = new Vue({
   },
   
   methods: {
+    clickHandler: function(event){
+      this.message = this.message.split('').reverse().join('')
+    }
   }
 })

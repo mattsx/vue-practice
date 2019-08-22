@@ -2,20 +2,15 @@
 //   template: '<p>template</p>'
 // })
 
-Vue.filter('numberFormat', function(value){
-  return value.toLocaleString();
-})
-
-Vue.filter('toUSD', function(value){
-  return value / 100
+Vue.filter('readMore', function(text, length, suffix){
+  return text.substring(0, length) + suffix
 })
 
 var app = new Vue({
   // options
   el: '#app',
   data: {
-    message: 'hello vue.js!',
-    jpyPrice: 298000,
+    message: 'じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶらこうじのぶらこうじぱいぽぱいぽぱいぽのしゅーりんがんしゅーりんがんのぐーりんだいぐーりんだいのぽんぽこぴーのぽんぽこなのちょうきゅうめいのちょうすけ',
   },
   
   mounted: function() {

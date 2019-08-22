@@ -12,15 +12,9 @@
         <h2>sec7 監視プロパティ</h2>
         <p>{{ message }}</p>
         
-        <p>
-          <input type="text" name="" value="" v-model:value="km"> km
-        </p>
-        <p>
-          <input type="text" name="" value="" v-model:value="m"> m
-        </p>
-        <p>
-          <input type="text" name="" value="" v-model:value="mm"> mm
-        </p>
+        <ul>
+          <li v-for="color in colors">{{ color.name }}</li>
+        </ul>
         
         <hr>
         <pre>{{ $data }}</pre>

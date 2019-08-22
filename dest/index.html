@@ -11,10 +11,9 @@
     <div class="container">
       
       <div id="app">
-        <p v-show="toggle">
-          Hello.
-        </p>
-        
+        <ol>
+          <li v-for="color in colors">{{ color }}</li>
+        </ol>
       </div>
       
     </div>

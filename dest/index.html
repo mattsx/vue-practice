@@ -9,7 +9,14 @@
     <div class="container">
       
       <div id="app">
+        <h2>Bitcoin Price</h2>
+        <ul>
+          <li v-for="(rate, currency) in bpi ">
+            {{ currency }} : {{ rate.rate_float }}
+          </li>
+        </ul>
         
+        <pre>{{ $data }}</pre>
       </div>
       
     </div>

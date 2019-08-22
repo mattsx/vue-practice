@@ -1,4 +1,4 @@
-Vue.component('yossha', {
+Vue.component('template', {
   template: '<p>template</p>'
 })
 

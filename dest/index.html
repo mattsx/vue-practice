@@ -9,22 +9,15 @@
     <div class="container">
       
       <div id="app">
-        <h2>Bitcoin Price</h2>
+        <h2>v-bind省略記法</h2>
+        <p>{{ message }}</p>
+        <p>
+          <a v-bind:href="url">google</a>
+        </p>
+        <p>
+          <a :href="url">google</a>
+        </p>
         
-        <section v-if="hasError">
-          Error.
-        </section>
-        
-        <section v-else>
-          <div v-if="loading">
-            Loading...
-          </div>
-          <ul v-cloak>
-            <li v-for="(rate, currency) in bpi ">
-              {{ currency }} : {{ rate.rate_float | currencyDecimal }}
-            </li>
-          </ul>
-        </section>
       </div>
       
     </div>

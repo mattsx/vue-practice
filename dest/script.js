@@ -16,8 +16,5 @@ var app = new Vue({
   },
   
   methods: {
-    clickHandler: function(event){
-      this.message = this.message.split('').reverse().join('')
-    }
   }
 })

@@ -11,7 +11,16 @@
       <div id="app">
         <h2>sec7 監視プロパティ</h2>
         <p>{{ message }}</p>
-        <input type="text" name="" value="" v-model="message">
+        
+        <p>
+          <input type="text" name="" value="" v-model:value="km"> km
+        </p>
+        <p>
+          <input type="text" name="" value="" v-model:value="m"> m
+        </p>
+        <p>
+          <input type="text" name="" value="" v-model:value="mm"> mm
+        </p>
         
         <hr>
         <pre>{{ $data }}</pre>

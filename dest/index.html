@@ -11,9 +11,13 @@
     <div class="container">
       
       <div id="app">
-        <ol>
-          <li v-for="color in colors">{{ color }}</li>
-        </ol>
+        <ul>
+          <li v-for="value in user">{{ value }}</li>
+        </ul>
+        <hr>
+        <ul>
+          <li v-for="(v, k) in user">{{ k }} : {{ v }}</li>
+        </ul>
       </div>
       
     </div>

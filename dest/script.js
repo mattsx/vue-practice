@@ -2,6 +2,10 @@ var app = new Vue({
   // options
   el: '#app',
   data: {
-    colors: ['Red', 'Green', 'Blue']
+    user: {
+      firstName: 'Taro',
+      lastName: 'Yamada',
+      age: 28
+    }
   }
 })

@@ -7,7 +7,8 @@ var app = new Vue({
   el: '#app',
   data: {
     bpi: null,
-    hasError: false
+    hasError: false,
+    loading: true
   },
   
   mounted: function() {
@@ -19,6 +20,9 @@ var app = new Vue({
         console.error(error)
         this.hasError = true
         return
+      }.bind(this))
+      .finally(function(){
+        this.loading = false
       }.bind(this))
   },
   

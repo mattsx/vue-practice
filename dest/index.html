@@ -11,11 +11,14 @@
     <div class="container">
       
       <div id="app">
-        <button v-on:click="onclick">
-          Click!
-        </button>
         <p>
-          {{ now }}
+          <input type="text" v-model="message">
+        </p>
+        <p>
+          <input type="text" v-model="message">
+        </p>
+        <p>
+          {{ message }}
         </p>
       </div>
       

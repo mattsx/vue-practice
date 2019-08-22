@@ -19,7 +19,23 @@
           <a v-bind:href="url">{{linkMessage}}</a>
         </p>
         
+        <hr>
+        
         <yossha></yossha>
+        
+        <hr>
+        
+        <ol>
+          <li v-for="language in languages">{{ language }}</li>
+        </ol>
+        
+        <hr>
+        
+        <button v-on:click="clickHandler">click!</button>
+        
+        <hr>
+        
+        <input type="text" v-model="message">
       </div>
       
     </div>

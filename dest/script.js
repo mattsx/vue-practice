@@ -9,6 +9,17 @@ var app = new Vue({
     message: 'Hello, World!',
     linkMessage: 'Vue.js link here.',
     url: 'https://jp.vuejs.org/',
-    toggle: true
+    toggle: true,
+    
+    languages: [
+      'JavaScript',
+      'Ruby',
+      'Python'
+    ]
+  },
+  methods: {
+    clickHandler: function() {
+      this.message = 'clicked!'
+    }
   }
 })

@@ -10,17 +10,12 @@
     <div id="app">
       <div class="container" v-cloak>
 
-        <p v-if="color === 'red'">
-          Stop
+        <p v-show="toggle">
+          Hello, Vue.js
         </p>
-        <p v-else-if="color === 'yellow'">
-          Caution
-        </p>
-        <p v-else-if="color === 'green'">
-          Go
-        </p>
-        <p v-else>
-          Not red/yello/green
+        
+        <p v-if="toggle">
+          Hello, Vue.js
         </p>
         
         <hr>

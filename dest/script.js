@@ -7,13 +7,26 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'hello, vue.js',
+    colors: [
+      { name: 'Red' },
+      { name: 'Green' },
+      { name: 'Blue' }
+    ]
+  },
+  
+  watch: {
+    colors: {
+      handler: function(newValue, oldValue) {
+        console.log('new: %s, oldValue: %s',
+        JSON.stringify(newValue, null, '\t'),
+        JSON.stringify(oldValue, null, '\t'))
+      },
+      deep: true,
+      immediate: true
+    }
   },
   
   computed: {
-    computedNumber: function() {
-      console.log('computed!')
-      return Math.random()
-    }
   },
   
   mounted: function() {
@@ -26,9 +39,5 @@ var app = new Vue({
   // },
   
   methods: {
-    methodsNumber: function() {
-      console.log('methods!')
-      return Math.random()
-    }
   }
 })

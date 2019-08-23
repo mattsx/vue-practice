@@ -6,38 +6,56 @@ var app = new Vue({
   // options
   el: '#app',
   data: {
-    message: 'hello, vue.js',
-    colors: [
-      { name: 'Red' },
-      { name: 'Green' },
-      { name: 'Blue' }
-    ]
+    items: null,
+    keyword:'',
+    message:''
   },
   
   watch: {
-    colors: {
-      handler: function(newValue, oldValue) {
-        console.log('new: %s, oldValue: %s',
-        JSON.stringify(newValue, null, '\t'),
-        JSON.stringify(oldValue, null, '\t'))
-      },
-      deep: true,
-      immediate: true
+    keyword: function(newKeyword, oldKeyword) {
+      this.message = 'Waiting for you to stop typing...'
+      this.debounceGetAnswer()
     }
   },
   
-  computed: {
+  // createdとmountedはあまり変わりがない。DOMにアクセスしないならcreatedのほうが早い
+  created: function() {
+    // this.keyword = 'JavaScript'
+    // this.getAnswer()
+    this.debounceGetAnswer = _.debounce(this.getAnswer)
   },
   
   mounted: function() {
   },
   
-  // filters: {
-  //   numberFormat: function(value){
-  //     return value.toLocaleString();
-  //   }
-  // },
+  computed: {
+  },
+  
+  filters: {
+  },
   
   methods: {
+    getAnswer: function() {
+      if(this.keyword === '') {
+        this.items = null
+        this.message = ''
+        return
+      }
+      
+      this.message = 'Loading...'
+      var vm = this
+      var params = { page: 1, per_page: 20, query: this.keyword }
+      axios.get('https://qiita.com/api/v2/items', { params })
+        .then(function(response){
+          console.log(response)
+          vm.items = response.data
+        })
+        .catch(function(error) {
+          vm.message = 'Error' + error
+        })
+        .finally(function(){
+          vm.message = ''
+        })
+    }
   }
 })

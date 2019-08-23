@@ -12,12 +12,17 @@ var app = new Vue({
   },
   
   watch: {
+    keyword: function(newKeyword, oldKeyword) {
+      this.message = 'Waiting for you to stop typing...'
+      this.debounceGetAnswer()
+    }
   },
   
   // createdとmountedはあまり変わりがない。DOMにアクセスしないならcreatedのほうが早い
   created: function() {
-    this.keyword = 'JavaScript'
-    this.getAnswer()
+    // this.keyword = 'JavaScript'
+    // this.getAnswer()
+    this.debounceGetAnswer = _.debounce(this.getAnswer)
   },
   
   mounted: function() {
@@ -33,6 +38,7 @@ var app = new Vue({
     getAnswer: function() {
       if(this.keyword === '') {
         this.items = null
+        this.message = ''
         return
       }
       

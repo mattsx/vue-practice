@@ -9,9 +9,18 @@
       
     <div id="app">
       <div class="container" v-cloak>
-        
-        <p>
-          Hello, <span v-bind:style="styleObject">Vue.js!</span>
+
+        <p v-if="color === 'red'">
+          Stop
+        </p>
+        <p v-else-if="color === 'yellow'">
+          Caution
+        </p>
+        <p v-else-if="color === 'green'">
+          Go
+        </p>
+        <p v-else>
+          Not red/yello/green
         </p>
         
         <hr>

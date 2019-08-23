@@ -1,7 +1,9 @@
 var app = new Vue({
   el: '#app',
   data: {
-    largeclass: 'large',
-    dangerClass: 'text-danger'
+    classObject: {
+      large: true,
+      'text-danger': true
+    }
   }
 })

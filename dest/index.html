@@ -11,10 +11,10 @@
       <div class="container" v-cloak>
 
         <p>
-          {{ counter }}
+          {{ message }}
         </p>
         
-        <button v-on:click="clickHandler">click!</button>
+        <button v-on:click="clickHandler($event, 'Vue.js')">click!</button>
         
         <hr>
         <pre>{{ $data }}</pre>

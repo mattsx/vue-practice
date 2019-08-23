@@ -9,11 +9,14 @@
       
     <div id="app">
       <div class="container" v-cloak>
+        
+        <!-- <input type="text" name="" value="" v-on:keyup.27="clear" v-model="message"> -->
+        <!-- <input type="text" name="" value="" v-on:keyup.esc="clear" v-model="message"> -->
+        <input type="text" name="" value="" v-on:keyup.esc.space.up="clear" v-model="message">
 
         <p>
           {{ message }}
         </p>
-        <button type="button" name="button" v-on:click.once="clickHandler">Now</button>
         
         <hr>
         <pre>{{ $data }}</pre>

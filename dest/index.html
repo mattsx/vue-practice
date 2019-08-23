@@ -10,7 +10,11 @@
     <div id="app">
       <div class="container" v-cloak>
 
+        <p>
+          {{ counter }}
+        </p>
         
+        <button v-on:click="counter++">click!</button>
         
         <hr>
         <pre>{{ $data }}</pre>

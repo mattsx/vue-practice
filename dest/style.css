@@ -12,5 +12,13 @@
 }
 
 .text-danger {
-  color: red;
+  color: red !important;
+}
+
+.bg-gray {
+  background: gray;
+}
+
+.text-blue {
+  color: blue;
 }

@@ -1,14 +1,14 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: ''
+    message: 'default'
   },
   methods: {
     clear: function() {
       this.message = ''
     },
     clickHandler: function() {
-      alert('shift + click!')
+      alert('clicked!')
     }
   }
 })

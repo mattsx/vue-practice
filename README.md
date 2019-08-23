@@ -10,7 +10,7 @@ https://programmingnavi.com/support-vuejs/
 
 # Docker-lamp
 
-# Command
+## Command
 Start
 ```
 docker-compose up -d

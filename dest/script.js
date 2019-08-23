@@ -1,6 +1,14 @@
 var app = new Vue({
   el: '#app',
   data: {
-    toggle: true
+    message: 'default'
+  },
+  methods: {
+    clear: function() {
+      this.message = ''
+    },
+    clickHandler: function() {
+      alert('clicked!')
+    }
   }
 })

@@ -9,13 +9,21 @@
       
     <div id="app">
       <div class="container" v-cloak>
-
-        <p v-show="toggle">
-          Hello, Vue.js
-        </p>
         
-        <p v-if="toggle">
-          Hello, Vue.js
+        <div>
+          <button v-on:click="clickHandler">
+            Click me!
+          </button>
+        </div>
+        
+        <div>
+          <button @click="clickHandler">
+            Click me!
+          </button>
+        </div>
+
+        <p>
+          {{ message }}
         </p>
         
         <hr>

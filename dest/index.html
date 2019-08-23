@@ -11,7 +11,7 @@
       <div class="container" v-cloak>
         
         <p>
-          Hello, <span class="bg-gray text-blue" v-bind:class="{ large: isLarge, 'text-danger': hasError }">Vue.js!</span>
+          Hello, <span v-bind:class="[largeclass, dangerClass]">Vue.js!</span>
         </p>
         
         <hr>

@@ -4,10 +4,8 @@ var app = new Vue({
     message: ''
   },
   methods: {
-    clickHandler: function($event, message){
-      console.log($event)
-      this.message = message
-      // this.counter++
+    clickHandler: function() {
+      this.message = new Date().toLocaleTimeString()
     }
   }
 })

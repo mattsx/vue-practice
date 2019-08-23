@@ -13,8 +13,7 @@
         <p>
           {{ message }}
         </p>
-        
-        <button v-on:click="clickHandler($event, 'Vue.js')">click!</button>
+        <button type="button" name="button" v-on:click.once="clickHandler">Now</button>
         
         <hr>
         <pre>{{ $data }}</pre>

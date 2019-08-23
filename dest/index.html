@@ -9,9 +9,13 @@
       
     <div id="app">
       <div class="container" v-cloak>
+
+        <p v-show="toggle">
+          Hello, Vue.js
+        </p>
         
-        <p>
-          Hello, <span v-bind:style="styleObject">Vue.js!</span>
+        <p v-if="toggle">
+          Hello, Vue.js
         </p>
         
         <hr>

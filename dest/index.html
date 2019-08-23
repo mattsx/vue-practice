@@ -11,22 +11,8 @@
       <div class="container" v-cloak>
         
         <p>
-          <input type="text" name="" value="" v-model="keyword">
+          Hello, <span v-bind:class="{ large: isLarge }">Vue.js!</span>
         </p>
-        <p>
-          {{ message }}
-        </p>
-        
-        <ul>
-          <li v-for="item in items">
-            <!-- {{ item.title }} -->
-            <p>
-              <a :href="item.url" target="_blank">{{ item.title }}</a>
-              <br>
-              Likes: {{ item.likes_count }}
-            </p>
-          </li>
-        </ul>
         
         <hr>
         <pre>{{ $data }}</pre>

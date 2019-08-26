@@ -17,6 +17,6 @@ services:
     links:
       - "db01:db01"
     volumes:
-      - ./dest:/var/www/public_html
+      - ./public:/var/www/public_html
       - ./docker/logs:/var/log/httpd
       - ./docker/apache_conf/00_virtualhost.conf:/etc/httpd/conf.d/00_virtualhost.conf

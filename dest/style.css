@@ -3,13 +3,6 @@
   max-width: 980px;
 }
 
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 2.5s;
-}
-
-.v-enter,
-.v-leave {
-  opacity: 0;
+[v-cloak] {
+  display: none;
 }

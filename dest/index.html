@@ -8,17 +8,16 @@
   <body>
       
     <div id="app">
-      <div class="container" v-cloak>
+      <div class="container">
         
-        <button @click="show=!show">Change</button>
-        <transition>
-          <p v-if="show">
-            Hello, Transition
-          </p>
-        </transition>
+        <router-link to="/">Home</router-link>
+        <router-link to="/users/123">User</router-link>
+        <router-link to="/users/123/profile">Profile</router-link>
+        <router-link to="/users/123/posts">Posts</router-link>
         
-        <hr>
-        <pre>{{ $data }}</pre>
+        <router-view>
+          
+        </router-view>
         
       </div>
     </div>
@@ -26,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.0.6/dist/vue-router.min.js"></script>
     <script src="/script.js" charset="utf-8"></script>
   </body>
 </html>

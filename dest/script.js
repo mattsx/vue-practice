@@ -30,6 +30,7 @@ const router = new VueRouter({
       children: [
         {
           path: 'profile',
+          redirect: 'posts',
           component: Profile
         },
         {

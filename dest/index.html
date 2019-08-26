@@ -10,12 +10,9 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <p>
-          {{ message }}
-        </p>
-        <p>
-          <input type="text" v-model="message" value="foo">
-        </p>
+        <pre>{{ message }}</pre>
+        <!-- <textarea name="name" rows="8" cols="80">{{ message }}</textarea> -->
+        <textarea name="name" rows="8" cols="80" v-model="message"></textarea>
         
         <hr>
         <pre>{{ $data }}</pre>

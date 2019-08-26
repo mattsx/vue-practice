@@ -10,7 +10,12 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <input type="text" v-model.lazy="message" name="">
+        <p>
+          <input type="text" v-model.trim="message">
+        </p>
+        <p>
+          <input type="text" v-model="message">
+        </p>
         <p>
           {{ message }}
         </p>

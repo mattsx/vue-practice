@@ -15,14 +15,6 @@ const Profile = {
   `
 }
 
-const Posts = {
-  template: `
-    <div class="posts">
-      <h2>Posts {{ $route.params.userId }}</h2>
-    </div>
-  `
-}
-
 const router = new VueRouter({
   routes: [
     {
@@ -30,13 +22,8 @@ const router = new VueRouter({
       children: [
         {
           path: 'profile',
-          redirect: { name: 'posts' },
-          component: Profile
-        },
-        {
-          path: 'posts',
-          name: 'posts',
-          component: Posts
+          component: Profile,
+          alias: 'posts'
         }
       ]
     }

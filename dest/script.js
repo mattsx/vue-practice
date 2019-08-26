@@ -1,7 +1,11 @@
 var app = new Vue({
   el: '#app',
   data: {
-    checked: false,
-    color: '',
+    selected: '',
+    colors: [
+      "Red",
+      "Yellow",
+      "Green",
+    ]
   }
 })

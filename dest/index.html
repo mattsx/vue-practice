@@ -10,14 +10,10 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <input type="radio" id="red" name="" value="Red" v-model="color">
-        <label for="red">Red</label>
-        
-        <input type="radio" id="yellow" name="" value="Yellow" v-model="color">
-        <label for="yellow">Yellow</label>
-        
-        <input type="radio" id="green" name="" value="Green" v-model="color">
-        <label for="green">Green</label>
+        <select class="" v-model="selected">
+          <option disabled value="">Plsease select one</option>
+          <option v-for="color in colors">{{ color }}</option>
+        </select>
         
         <hr>
         <pre>{{ $data }}</pre>

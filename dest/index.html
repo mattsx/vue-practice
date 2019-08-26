@@ -10,9 +10,8 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <pre>{{ message }}</pre>
-        <!-- <textarea name="name" rows="8" cols="80">{{ message }}</textarea> -->
-        <textarea name="name" rows="8" cols="80" v-model="message"></textarea>
+        <input type="checkbox" name="" value="" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
         
         <hr>
         <pre>{{ $data }}</pre>

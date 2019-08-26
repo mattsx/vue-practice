@@ -10,9 +10,12 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <button-counter></button-counter>
-        <button-counter></button-counter>
-        <button-counter></button-counter>
+        <button @click="show=!show">Change</button>
+        <transition>
+          <p v-if="show">
+            Hello, Transition
+          </p>
+        </transition>
         
         <hr>
         <pre>{{ $data }}</pre>

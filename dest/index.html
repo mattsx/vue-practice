@@ -10,18 +10,12 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <div>
-          <button v-on:click="clickHandler">
-            Click me!
-          </button>
-        </div>
-        
-        <div>
-          <button @click="clickHandler">
-            Click me!
-          </button>
-        </div>
-
+        <p>
+          <input type="number" v-model.number="message">
+        </p>
+        <p>
+          <input type="text" v-model="message">
+        </p>
         <p>
           {{ message }}
         </p>

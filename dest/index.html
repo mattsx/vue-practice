@@ -10,8 +10,14 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <input type="checkbox" name="" value="" id="checkbox" v-model="checked">
-        <label for="checkbox">{{ checked }}</label>
+        <input type="checkbox" id="red" name="" value="Red" v-model="colors">
+        <label for="red">Red</label>
+        
+        <input type="checkbox" id="Yellow" name="" value="Yellow" v-model="colors">
+        <label for="Yellow">Yellow</label>
+        
+        <input type="checkbox" id="green" name="" value="Green" v-model="colors">
+        <label for="green">Green</label>
         
         <hr>
         <pre>{{ $data }}</pre>

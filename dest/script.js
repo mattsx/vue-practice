@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    selected: '',
+    selected: [],
     colors: [
       "Red",
       "Yellow",

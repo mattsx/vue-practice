@@ -1,6 +1,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'default'
+    message: 'Hello, Vue.js!'
   }
 })

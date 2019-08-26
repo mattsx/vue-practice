@@ -10,10 +10,10 @@
     <div id="app">
       <div class="container" v-cloak>
         
-        <select class="" v-model="selected" multiple>
-          <option disabled value="">Plsease select one</option>
-          <option v-for="color in colors">{{ color }}</option>
-        </select>
+        <input type="text" v-model.lazy="message" name="">
+        <p>
+          {{ message }}
+        </p>
         
         <hr>
         <pre>{{ $data }}</pre>

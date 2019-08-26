@@ -16,6 +16,7 @@ const Profile = {
 }
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/users/:userId', component: User,
